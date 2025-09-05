@@ -1,36 +1,53 @@
+<!-- In development by Matheus Ambrozio -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaf Forum - Page</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Leaf Forum</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Leaf Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-            <h2>Welcome to Leaf Forum</h2>
-            <pre class="ascii-art">
-           ^^                   @@@@@@@@@
-      ^^       ^^            @@@@@@@@@@@@@@@
-                           @@@@@@@@@@@@@@@@@@
-                          @@@@@@@@@@@@@@@@@@@@
-~~~~ ~~ ~~~~~ ~~~~~~~~ ~~ &&&&&&&&&&&&&&&&&&&& ~~~~~~~ ~~~~~~~~~~~ ~~~
-~         ~~   ~  ~       ~~~~~~~~~~~~~~~~~~~~ ~       ~~     ~~ ~
-  ~      ~~      ~~ ~~ ~~  ~~~~~~~~~~~~~ ~~~~  ~     ~~~    ~ ~~~  ~ ~~ 
-  ~  ~~     ~         ~      ~~~~~~  ~~ ~~~       ~~ ~ ~~  ~~ ~ 
-~  ~       ~ ~      ~           ~~ ~~~~~~  ~      ~~  ~             ~~
-      ~             ~        ~      ~      ~~   ~             ~
-            </pre>
-            <p>This is a placeholder page. Replace with your content.</p>
+        <section id="posts">
+            <h2>Recent Posts</h2>
+            <hr> 
+            <div id="post-list">
+
+                <article class="post">
+                    <strong>Guest</strong>: Welcome to Leaf Forum!<br>
+                </article>
+            </div>
+        </section>
+        <aside>
+            <h3>Forum Tips</h3>
+            <p>Keep posts respectful and on-topic!</p>
+        </aside>
+        <section id="new-post">
+            <h2>Create a Post</h2>
+            <form id="post-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Post</button>
+            </form>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Leaf Forum</p>
     </footer>
-    <script src="../app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
